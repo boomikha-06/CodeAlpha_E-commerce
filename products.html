@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>Products</h2>
+
+<div class="container">
+{% for p in products %}
+    <div class="card">
+        <h3>{{ p[1] }}</h3>
+        <p>₹ {{ p[3] }}</p>
+        <a href="/add_to_cart/{{ p[0] }}">Add to Cart</a>
+    </div>
+{% endfor %}
+</div>
+
+</body>
+</html>
